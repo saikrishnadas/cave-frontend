@@ -1,6 +1,7 @@
 import { sanityClient } from "../../sanity";
 import { isMultiple } from "../../utils/checkMultiple";
-import Image from "next/image";
+import Image from "../../components/Image";
+import Review from "../../components/Review";
 import Link from "next/link";
 
 function Property({
@@ -25,14 +26,14 @@ function Property({
       <p>
         {reviewAmount} review{isMultiple(reviewAmount)}
       </p>
-      {/* <div className="images-section">
+      <div className="images-section">
         <Image identifier="main-image" image={mainImage} />
         <div className="sub-images-section">
           {images.map(({ _key, asset }, image) => (
             <Image key={_key} identifier="image" image={asset} />
           ))}
         </div>
-      </div> */}
+      </div>
 
       <div className="section">
         <div className="information">
@@ -87,8 +88,8 @@ function Property({
       <h2>
         {reviewAmount} review{isMultiple(reviewAmount)}
       </h2>
-      {/* {reviewAmount > 0 &&
-        reviews.map((review) => <Review key={review._key} review={review} />)} */}
+      {reviewAmount > 0 &&
+        reviews.map((review) => <Review key={review._key} review={review} />)}
 
       <hr />
 
