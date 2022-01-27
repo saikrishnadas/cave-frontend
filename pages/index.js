@@ -2,7 +2,6 @@ import Head from "next/head";
 import { sanityClient } from "../sanity";
 
 export default function Home({ properties }) {
-  console.log(properties);
   return (
     <div>
       <Head>
