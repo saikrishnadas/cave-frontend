@@ -17,15 +17,15 @@ function Property({
   host,
   reviews,
 }) {
-  const reviewAmount = reviews?.length;
+  // const reviewAmount = reviews?.length;
   return (
     <div className="container">
       <h1>
         <b>{title}</b>
       </h1>
-      <p>
+      {/* <p>
         {reviewAmount} review{isMultiple(reviewAmount)}
-      </p>
+      </p> */}
       <div className="images-section">
         <Image identifier="main-image" image={mainImage} />
         <div className="sub-images-section">
@@ -70,9 +70,9 @@ function Property({
         </div>
         <div className="price-box">
           <h2>£{pricePerProperty}</h2>
-          <h4>
+          {/* <h4>
             {reviewAmount} review{isMultiple(reviewAmount)}
-          </h4>
+          </h4> */}
           <Link href="/">
             <div className="button">Change Dates</div>
           </Link>
@@ -85,11 +85,11 @@ function Property({
 
       <hr />
 
-      <h2>
+      {/* <h2>
         {reviewAmount} review{isMultiple(reviewAmount)}
       </h2>
       {reviewAmount > 0 &&
-        reviews.map((review) => <Review key={review._key} review={review} />)}
+        reviews.map((review) => <Review key={review._key} review={review} />)} */}
 
       <hr />
 
@@ -148,7 +148,7 @@ export const getServerSideProps = async (context) => {
         bedrooms: property.bedrooms,
         description: property.description,
         host: property.host,
-        reviews: property.reviews,
+        // reviews: property.reviews,
       },
     };
   }
